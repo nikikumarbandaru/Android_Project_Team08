@@ -6,6 +6,8 @@
      
 [Source Document](https://github.com/nikikumarbandaru/Android_Project_Team08/blob/main/Source%20Document.md)
 
+Identify any risky components-  
+
 Uses an outside API- Did not consider as of now
 
 Requires functionality we will not talk about- No 
