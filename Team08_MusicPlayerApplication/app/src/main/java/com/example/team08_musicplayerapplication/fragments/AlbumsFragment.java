@@ -1,4 +1,4 @@
-package com.atul.musicplayer.fragments;
+package com.test.musicplayer.fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
