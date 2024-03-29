@@ -1,4 +1,4 @@
-package com.atul.musicplayer.adapter;
+package com.test.musicplayer.adapter;
 
 import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
