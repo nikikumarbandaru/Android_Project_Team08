@@ -13,10 +13,31 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private MusicAdapter musicAdapter;
     private List<MusicModel.Music> musicList;
+    private FirebaseAuth auth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        auth = FirebaseAuth.getInstance();
+        emailET = findViewById(R.id.emailET);
+        passwordET = findViewById(R.id.passwordET);
+        loginBTN = findViewById(R.id.loginBTN);
+        registerBTN = findViewById(R.id.registerBTN);
+        
+        registerBTN.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                registerUser();
+            }
+        });
+
+        loginBTN.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                loginUser();
+            }
+        });
+        
         recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         musicList = new ArrayList<>();
@@ -34,5 +55,41 @@ public class MainActivity extends AppCompatActivity {
         musicList.add(new MusicModel.Music("Uptown Funk", "Mark Ronson ft. Bruno Mars", R.drawable.uptown_funk, R.raw.shallow));
         musicAdapter = new MusicAdapter(musicList, MainActivity.this);
         recyclerView.setAdapter(musicAdapter);
+    }
+    private void registerUser() {
+        String email = emailET.getText().toString().trim();
+        String pass = passwordET.getText().toString().trim();
+
+        auth.createUserWithEmailAndPassword(email, pass)
+                .addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            Toast.makeText(MainActivity.this, "Registration successful", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(MainActivity.this, NoteActivity.class));
+                            finish();
+                        } else {
+                            Toast.makeText(MainActivity.this, "Registration failed", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+    }
+    private void loginUser() {
+        String email = emailET.getText().toString().trim();
+        String pass = passwordET.getText().toString().trim();
+
+        auth.signInWithEmailAndPassword(email, pass)
+                .addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            Toast.makeText(MainActivity.this, "Login successful", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(MainActivity.this, NoteActivity.class));
+                            finish();
+                        } else {
+                            Toast.makeText(MainActivity.this, "Login failed", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
     }
 }
