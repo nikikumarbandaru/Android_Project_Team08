@@ -4,6 +4,8 @@
 
 *Project Team Members:* Nikith Kumar Bandaru, Dimple Masamsetty Suresh, Sahithi Yamasani, Sreeja Vasa
 
+![Screenshot 2024-04-11 211642](https://github.com/nikikumarbandaru/Android_Project_Team08/assets/52192120/aea7e4ed-29c5-4b68-94b4-851e44904aeb)
+
 AppName: TunePick
 
 
