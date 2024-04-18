@@ -1,4 +1,4 @@
-package com.example.team08_musicplayerapplication;
+package com.example.musicplayer;
 
 import java.io.Serializable;
 
@@ -8,11 +8,13 @@ public class MusicModel  {
         private String artist;
         private int image;
         private int song;
+        private int Id;
         public Music(String title, String artist,int image,int song) {
             this.title = title;
             this.artist = artist;
             this.image=image;
             this.song=song;
+            this.Id=Id;
         }
         public String getTitle() {
             return title;
@@ -26,6 +28,7 @@ public class MusicModel  {
         public int getSong() {
             return song;
         }
+        public int getId() {return Id;}
     }
 }
 
