@@ -1,68 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    android:background="@android:color/holo_green_light"
-    tools:context=".MainActivity">
+    android:background="#100F10">
 
-    <EditText
-        android:id="@+id/emailET"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:hint="Email"
-        android:textColorHint="#757575"
-        android:backgroundTint="#FF4081"
-        android:inputType="textEmailAddress"
-        android:padding="12dp"/>
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="87dp"
+        android:layout_height="89dp"
+        android:layout_marginStart="308dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/musicicon" />
 
-    <EditText
-        android:id="@+id/passwordET"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/emailET"
-        android:layout_marginBottom="16dp"
-        android:hint="Password"
-        android:textColorHint="#757575"
-        android:backgroundTint="#FF4081"
-        android:inputType="textPassword"
-        android:padding="12dp"/>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="334dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="281dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
 
-    <Button
-        android:id="@+id/loginBTN"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/passwordET"
-        android:layout_marginTop="16dp"
-        android:text="Login"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold"
-        android:background="#3F51B5"/>
-
-    <Button
-        android:id="@+id/registerBTN"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/loginBTN"
-        android:layout_marginTop="16dp"
-        android:text="Register"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold"
-        android:background="#3F51B5"/>
-
-    <ScrollView
-        android:id="@+id/musicScrollView"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_below="@id/registerBTN"
-        android:layout_marginTop="16dp">
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-    </ScrollView>
+            android:layout_height="match_parent"
+            android:background="#D2E3E1"
+            android:orientation="vertical">
 
-</RelativeLayout>
+            <EditText
+                android:id="@+id/emailET"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="Enter Username"
+                android:inputType="text"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/passwordET"
+                android:layout_width="345dp"
+                android:layout_height="3dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="Enter Password"
+                android:inputType="textPassword"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/loginB"
+                android:layout_width="205dp"
+                android:layout_height="8dp"
+                android:layout_weight="1"
+                android:text="Login"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/RegisterB"
+                android:layout_width="216dp"
+                android:layout_height="3dp"
+                android:layout_weight="1"
+                android:text="Register"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="41dp"
+        android:layout_marginBottom="30dp"
+        android:fontFamily="sans-serif-black"
+        android:text="TunePick"
+        android:textColor="#5C14DC"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="87dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="11dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/musicicon" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
