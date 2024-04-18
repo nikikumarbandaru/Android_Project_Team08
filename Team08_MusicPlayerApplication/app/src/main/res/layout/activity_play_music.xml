@@ -1,8 +1,8 @@
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#171616">
 
     <!-- TextView for displaying the song name -->
     <TextView
@@ -13,6 +13,7 @@
         android:layout_marginTop="20dp"
         android:fontFamily="serif"
         android:text="Song Name"
+        android:textColor="#E41D1D"
         android:textSize="24sp"
         android:textStyle="bold"
         tools:ignore="HardcodedText" />
@@ -22,11 +23,11 @@
         android:id="@+id/SongImageIV"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:src="@drawable/toosadtodance"
         android:layout_below="@id/SongNameTV"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:contentDescription="TODO"
+        android:src="@drawable/toosadtodance"
         tools:ignore="ContentDescription,HardcodedText" />
 
     <!-- ImageButton for pausing or playing the song -->
@@ -38,7 +39,7 @@
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="166dp"
         android:layout_marginTop="19dp"
-        android:background="@null"
+        android:background="#DAD3D3"
         android:contentDescription="TODO"
         android:src="@drawable/play"
         tools:ignore="ContentDescription,DuplicateSpeakableTextCheck,HardcodedText,RtlHardcoded" />
@@ -52,7 +53,7 @@
         android:layout_marginLeft="36dp"
         android:layout_marginTop="23dp"
         android:layout_toRightOf="@id/PausePlayIB"
-        android:background="@null"
+        android:background="#E6DFDF"
         android:src="@drawable/next"
         tools:ignore="ContentDescription,RtlHardcoded,SpeakableTextPresentCheck" />
 
@@ -65,7 +66,7 @@
         android:layout_marginLeft="-354dp"
         android:layout_marginTop="24dp"
         android:layout_toRightOf="@id/nextIB"
-        android:background="@null"
+        android:background="#ECE4E4"
         android:src="@drawable/prev"
         tools:ignore="ContentDescription,RtlHardcoded,SpeakableTextPresentCheck" />
 
@@ -74,10 +75,10 @@
         android:id="@+id/backBTN"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Back"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="20dp"
+        android:text="Back"
         tools:ignore="HardcodedText" />
 
     <!-- TextView for displaying the name of the song -->
@@ -99,4 +100,13 @@
         android:layout_below="@id/NameTV"
         android:layout_marginTop="10dp"
         android:fontFamily="monospace" />
+
+    <TextView
+        android:id="@+id/lyricsTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="400dp"
+        android:text="Lyrics"
+        android:textColor="#EFEAEA" />
+
 </RelativeLayout>
