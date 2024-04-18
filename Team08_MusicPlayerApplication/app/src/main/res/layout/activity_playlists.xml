@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Playlists">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#151414"
+            android:orientation="vertical"
+            android:paddingBottom="16dp">
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:text="Playlist"
+                android:textColor="#D64343"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+            <!-- English Songs -->
+            <TextView
+                android:id="@+id/textViewEnglishSongs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:text="English Songs"
+                android:textColor="#FFF"
+                android:textSize="18sp" />
+            <ImageButton
+                android:id="@+id/Button1"
+                android:layout_width="209dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                app:srcCompat="@drawable/english_songs" />
+            <!-- Telugu Songs -->
+            <TextView
+                android:id="@+id/textViewTeluguSongs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:text="Telugu Songs"
+                android:textColor="#FFF"
+                android:textSize="18sp" />
+            <ImageButton
+                android:id="@+id/Button6"
+                android:layout_width="209dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                app:srcCompat="@drawable/telugu_songs" />
+            <!-- Hindi Songs -->
+            <TextView
+                android:id="@+id/textViewHindiSongs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:text="Hindi Songs"
+                android:textColor="#FFF"
+                android:textSize="18sp" />
+            <ImageButton
+                android:id="@+id/Button7"
+                android:layout_width="209dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                app:srcCompat="@drawable/hindi_songs" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
